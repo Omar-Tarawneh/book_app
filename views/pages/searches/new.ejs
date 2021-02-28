@@ -1,19 +1,22 @@
 <html lang="en">
+
 <head>
     <title>Search</title>
 </head>
+
 <body>
-    <form action="" method="POST">
+    <form action="/searches" method="POST">
         <fieldset>
-            <input type="text" name="seachQuery" id="" placeholder="enter title or auther name">
-            <label for="author">author</label>
-            <input type="radio" name="seachBy" id="author" value="author">
-            <label for="title">title</label>
-            <input type="radio" name="searchBy" id="title" value="title">
-            <button>search</button>
+            <input type="text" name="seachQuery" id="search" placeholder="Enter Title or Author name">
+            <label for="inauthor">author</label>
+            <input type="radio" name="searchBy" id="inauthor" value="author">
+            <label for="intitle">title</label>
+            <input type="radio" name="searchBy" id="intitle" value="title">
+            <input type="submit" value='search'>
 
         </fieldset>
     </form>
-    
+
 </body>
+
 </html>
