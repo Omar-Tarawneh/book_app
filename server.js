@@ -17,15 +17,19 @@ const PORT = process.env.PORT;
 app.set('view engine', 'ejs');
 app.use('/public', express.static('./public'));
 
+
 // handler funcitons
 
 const handleHello = (req, res) => {
     res.render('pages/index')
 }
-
+function handleSearch(req, res){
+res.render('pages/searches/new')
+}
 
 // roots / Paths
 app.get('/hello', handleHello);
+app.get('/searches/new', handleSearch)
 
 
 
