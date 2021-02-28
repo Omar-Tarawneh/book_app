@@ -78,7 +78,7 @@ function Book(BookObject) {
     this.title = BookObject.volumeInfo.title || 'NA';
     this.author = BookObject.volumeInfo.authors || 'NA';
     this.description = BookObject.volumeInfo.description || 'There is no Descripttion for this Book';
-    this.img = checkProperty(BookObject.volumeInfo).imageLinks.thumbnail.replace('http', 'https') || 'https://i.imgur.com/J5LVHEL.jpg';
+    this.img = checkProperty(BookObject.volumeInfo).imageLinks.thumbnail.replace('http:', 'https:') || 'https://i.imgur.com/J5LVHEL.jpg';
 }
 
 app.listen(PORT, () => {
