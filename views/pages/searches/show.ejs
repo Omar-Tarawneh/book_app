@@ -5,24 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles/style.css">
     <title>Show</title>
 </head>
 
 <body>
-    <h1>Result</h1>
-    <% booksArray.forEach(element=>{%>
-        <img src="<%= element.img%>" alt="">
-        <h1>
-            <%= element.title%>
-        </h1>
-        <h1>
-            <%= element.author%>
-        </h1>
-        <p>
-            <%= element.description%>
-        </p>
+    <header>
+        <nav>
+            <h1>Best Books!</h1>
+        </nav>
+    </header>
+    <main>
+        <legend>Result</legend>
+        <section id='book'>
+            <% booksArray.forEach(element=>{%>
+                <div class="bookDiv">
+                    <img class="bookImg" src="<%= element.img%>" alt="">
+                    <h2 class="Tilte">
+                        <%= element.title%>
+                    </h2>
+                    <p class="Author">
+                        <%= element.author%>
+                    </p>
+                    <p class="description">
+                        <%= element.description%>
+                    </p>
+                </div>
+                <%});%>
+        </section>
 
-        <%});%>
+    </main>
 
 </body>
 

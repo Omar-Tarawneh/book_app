@@ -2,20 +2,29 @@
 
 <head>
     <title>Search</title>
+    <link rel="stylesheet" href="/public/styles/style.css">
 </head>
 
 <body>
-    <form action="/searches" method="POST">
-        <fieldset>
+    <header>
+        <nav>
+            <h1>Best Books!</h1>
+        </nav>
+    </header>
+    <main>
+        <legend>Search By Title or Author</legend>
+        <form action="/searches" method="POST">
             <input type="text" name="seachQuery" id="search" placeholder="Enter Title or Author name">
-            <label for="inauthor">author</label>
-            <input type="radio" name="searchBy" id="inauthor" value="author">
-            <label for="intitle">title</label>
-            <input type="radio" name="searchBy" id="intitle" value="title">
-            <input type="submit" value='search'>
-
-        </fieldset>
-    </form>
+            <br>
+            <label class="radio" for="inauthor"><input type="radio" name="searchBy" id="inauthor"
+                    value="author">author</label>
+            <br>
+            <label class="radio" for="intitle"><input type="radio" name="searchBy" id="intitle"
+                    value="title">title</label>
+            <br>
+            <button type="submit">Search</button>
+        </form>
+    </main>
 
 </body>
 
