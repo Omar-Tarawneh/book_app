@@ -2,7 +2,33 @@
 
 // importing packages
 const express = require('express');
-const superagent = require('superagent');
+const cors = require('cors');
 
 // configration
 const app = express();
+app.use(cors());
+require('dotenv').config();
+
+// PORT
+const PORT = process.env.PORT;
+
+
+// view and statics
+app.set('view engine', 'ejs');
+app.use('/public', express.static('./public'));
+
+// handler funcitons
+
+const handleHello = (req, res) => {
+    res.render('pages/index')
+}
+
+
+// roots / Paths
+app.get('/hello', handleHello);
+
+
+
+app.listen(PORT, () => {
+    console.log('the app is listening on port: ' + PORT)
+});
