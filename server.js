@@ -26,17 +26,15 @@ const handleHello = (req, res) => {
 }
 
 function handleForm(req, res) {
-    res.render('pages/searches/new')
+    res.render('searches/new')
 }
 
 // Get the data from Google API and send the response
 function handleSearch(req, res) {
     let search_query = req.body.seachQuery;
     let search_by = req.body.searchBy;
-    // console.log(search_query, search_by);
     getBooksData(search_query, search_by, res).then(data => {
-        console.log(data);
-        res.render('pages/searches/show', { booksArray: data });
+        res.render('searches/show', { booksArray: data });
     }).catch(error => {
         res.render('pages/error', { errorObj: error });
     });
@@ -53,9 +51,7 @@ const getBooksData = (search_query, search_by, res) => {
     const query = {
         q: `${search_query}+in${search_by}`
     };
-    // console.log(query.q);
     return superagent.get(url).query(query).then(data => {
-        // console.log(data.body.items);
         let booksArray = data.body.items.map(book => new Book(book));
         console.log(booksArray);
         return booksArray;
@@ -63,7 +59,7 @@ const getBooksData = (search_query, search_by, res) => {
         res.render('pages/error', { errorObj: error });
     });
 }
-
+// check if the property exist if not add it with a default value
 const checkProperty = (property) => {
     if (property.hasOwnProperty('imageLinks')) {
         return property;
