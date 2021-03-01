@@ -6,25 +6,21 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1>Best Books!</h1>
-        </nav>
-    </header>
-    <main>
-        <legend>Search By Title or Author</legend>
-        <form action="/searches" method="POST">
-            <input type="text" name="seachQuery" id="search" placeholder="Enter Title or Author name">
-            <br>
-            <label class="radio" for="inauthor"><input type="radio" name="searchBy" id="inauthor"
-                    value="author">author</label>
-            <br>
-            <label class="radio" for="intitle"><input type="radio" name="searchBy" id="intitle"
-                    value="title">title</label>
-            <br>
-            <button type="submit">Search</button>
-        </form>
-    </main>
+    <%- include('../layout/header.ejs') %>
+        <main>
+            <legend>Search By Title or Author</legend>
+            <form action="/searches" method="POST">
+                <input type="text" name="seachQuery" id="search" placeholder="Enter Title or Author name">
+                <br>
+                <label class="radio" for="inauthor"><input type="radio" name="searchBy" id="inauthor"
+                        value="author">author</label>
+                <br>
+                <label class="radio" for="intitle"><input type="radio" name="searchBy" id="intitle"
+                        value="title">title</label>
+                <br>
+                <button type="submit">Search</button>
+            </form>
+        </main>
 
 </body>
 

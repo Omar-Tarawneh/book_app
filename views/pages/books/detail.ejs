@@ -1,55 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/styles/style.css">
-    <title>Document</title>
-</head>
-
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/public/styles/style.css">
-        <title>Show</title>
-    </head>
+<%- include('../../layout/head.ejs') %>
 
     <body>
-        <header>
-            <nav>
-                <h1>Best Books!</h1>
-            </nav>
-        </header>
-        <main>
-            <legend>Result</legend>
-            <section id='book'>
-                <div class="bookDiv">
-                    <img class="bookImg" src="<%= element.img%>" alt="">
-                    <h2 class="Tilte">
-                        <%= element.title%>
-                    </h2>
-                    <p class="Author">
-                        <%= element.author%>
-                    </p>
-                    <p class="description">
-                        <%= element.description%>
-                    </p>
-                    <button class="detail-button"><a href="/">Home Page</a></button>
-                </div>
-            </section>
+        <%- include('../../layout/header.ejs') %>
+            <main>
+                <legend>Result</legend>
+                <section id='book'>
+                    <div class="bookDiv">
+                        <img class="bookImg" src="<%= element.img%>" alt="">
+                        <h2 class="Tilte">
+                            <%= element.title%>
+                        </h2>
+                        <p class="Author">
+                            <%= element.author%>
+                        </p>
+                        <p class="description">
+                            <%= element.description%>
+                        </p>
+                        <button class="detail-button"><a href="/">Home Page</a></button>
+                    </div>
+                </section>
 
-        </main>
+            </main>
 
     </body>
-
-    </html>
-</body>
 
 </html>

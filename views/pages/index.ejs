@@ -1,59 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/styles/style.css">
-    <title>Document</title>
-</head>
-
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/public/styles/style.css">
-        <title>Show</title>
-    </head>
+<%- include('../layout/head.ejs') %>
 
     <body>
-        <header>
-            <nav>
-                <h1>Best Books!</h1>
-            </nav>
-            <div>
-            </div>
-        </header>
-        <main>
-            <legend>
-                <%= number%> Saved Books
-            </legend>
-            <section id='book'>
-                <% booksArray.forEach(element=>{%>
-                    <div class="bookDiv">
-                        <img class="bookImg" src="<%= element.img%>" alt="">
-                        <h2 class="Tilte">
-                            <%= element.title%>
-                        </h2>
-                        <p class="Author">
-                            <%= element.author%>
-                        </p>
-                        <button class="detail-button" type="submit"><a href="/books/<%= element.id%>">View
-                                Details</a></button>
-                    </div>
-                    <%});%>
-            </section>
+        <%- include('../layout/header.ejs') %>
+            <main>
+                <legend>
+                    <%= number%> Saved Books
+                </legend>
+                <section id='book'>
+                    <% booksArray.forEach(element=>{%>
+                        <div class="bookDiv">
+                            <img class="bookImg" src="<%= element.img%>" alt="">
+                            <h2 class="Tilte">
+                                <%= element.title%>
+                            </h2>
+                            <p class="Author">
+                                <%= element.author%>
+                            </p>
+                            <button class="detail-button" type="submit"><a href="/books/<%= element.id%>">View
+                                    Details</a></button>
+                        </div>
+                        <%});%>
+                </section>
 
-        </main>
+            </main>
 
     </body>
 
-    </html>
-</body>
+</html>
+
 
 </html>
