@@ -107,6 +107,7 @@ input[type=radio]{
     *{
         box-sizing: border-box;
         margin: 0;
+        width: 100%;
     }
     body{
         background-color: #9b9b9b;
@@ -143,7 +144,9 @@ input[type=radio]{
         padding: 6vw;
     
     }
-    
+    .detail-button{
+        width: 97%;
+    }
     input[type = text]{
         height: 1vh;
         width: 50vw;
@@ -182,10 +185,17 @@ input[type=radio]{
    
     #book{
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
-        justify-content: center;
-        align-content: space-between;
+        margin: auto;
+        width: 53%;
+   }
+   .select{
+       width:162%;
+       height: 50px;
+   }
+   a{
+       text-decoration: none;
+       color: white;
    }
 
    .bookDiv{
@@ -193,10 +203,11 @@ input[type=radio]{
     border: gray 1px solid;
     width: 260px;
     background-color: #d8d8d8;
+    margin-right: 50px;
     margin-top: 90px;
     padding: 20px;
     box-shadow: 5px 10px 18px #1b1b1b;
-    margin-left:36px ;
+    margin-left:50px ;
     border-radius: 50px;
     text-align: center;
    }

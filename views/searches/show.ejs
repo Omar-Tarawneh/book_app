@@ -30,6 +30,13 @@
                     <p class="description">
                         <%= element.description%>
                     </p>
+                    <form action="/books" method="POST">
+                        <input style="display: none;" type="text" name='title' value="<%= element.title%>">
+                        <input style="display: none;" type="text" name='author' value="<%= element.author%>">
+                        <input style="display: none;" type="text" name='description' value="<%= element.description%>">
+                        <input style="display: none;" type="text" name='img' value="<%= element.img%>">
+                        <button type="submit" class="select">Select This Book</button>
+                    </form>
                 </div>
                 <%});%>
         </section>
