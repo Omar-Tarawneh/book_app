@@ -144,6 +144,37 @@ input[type=radio]{
 .Author{
     margin-bottom: 10px;
 }
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background:rgb(0, 4, 1) ;
+    background-size: cover;
+    background-position: center;
+    text-align: center;  
+  
+    font-size: 15px;
+    color: #fff;
+    padding: 2px;
+    
+  }
+
+footer  ul{
+    display: inline-flex;
+    list-style: none;
+    margin-top: 28px;
+    
+}
+footer  ul li {
+    margin : 1px 5px 10px;
+    padding: 6px;
+    margin-right: 50px;
+    
+}
+footer ul li a {
+    color: white;
+    font-size: 20px;
+}
 
 }
 
@@ -308,5 +339,37 @@ input[type=radio]{
    .Author{
        margin-bottom: 10px;
    }
+   footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background:rgb(0, 4, 1) ;
+    background-size: cover;
+    background-position: center;
+    text-align: center;  
+    font-size: 15px;
+    color: #fff;
+    padding: 2px;
+    
+  }
+
+footer  ul{
+    display: inline-flex;
+    list-style: none;
+    margin-top: 28px;
+    
+}
+footer  ul li {
+    margin : 1px 5px 10px;
+    padding: 6px;
+    margin-right: 50px;
+    
+}
+footer ul li a {
+    color: white;
+    font-size: 20px;
+}
+}
+}
 
 }
