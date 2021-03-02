@@ -1,27 +1,24 @@
 <html lang="en">
 
-<head>
-    <title>Search</title>
-    <link rel="stylesheet" href="/public/styles/style.css">
-</head>
+<%- include('../layout/head.ejs') %>
 
-<body>
-    <%- include('../layout/header.ejs') %>
-        <main>
-            <legend>Search By Title or Author</legend>
-            <form action="/searches" method="POST">
-                <input type="text" name="seachQuery" id="search" placeholder="Enter Title or Author name">
-                <br>
-                <label class="radio" for="inauthor"><input type="radio" name="searchBy" id="inauthor"
-                        value="author">author</label>
-                <br>
-                <label class="radio" for="intitle"><input type="radio" name="searchBy" id="intitle"
-                        value="title">title</label>
-                <br>
-                <button type="submit">Search</button>
-            </form>
-        </main>
-
-</body>
+    <body>
+        <%- include('../layout/header.ejs') %>
+            <main>
+                <legend>Search By Title or Author</legend>
+                <form action="/searches" method="POST">
+                    <input type="text" name="seachQuery" id="search" placeholder="Enter Title or Author name">
+                    <br>
+                    <label class="radio" for="inauthor"><input type="radio" name="searchBy" id="inauthor"
+                            value="author">author</label>
+                    <br>
+                    <label class="radio" for="intitle"><input type="radio" name="searchBy" id="intitle"
+                            value="title">title</label>
+                    <br>
+                    <button type="submit">Search</button>
+                </form>
+            </main>
+            <script src="/public/js/app.js"></script>
+    </body>
 
 </html>
